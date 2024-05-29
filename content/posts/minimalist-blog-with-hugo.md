@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2024-05-29T20:09:26+07:00
 title = "A minimalist static site with Hugo"
 +++
