@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2024-07-27T10:50:39+07:00
 title = "Representing deque in Scheme"
 +++
