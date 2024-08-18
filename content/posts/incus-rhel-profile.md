@@ -30,74 +30,8 @@ draft = false
 
 Profile for Red Hat based distributions:
 
-```yaml
-config:
-  cloud-init.vendor-data: |
-    ## template: jinja
-    #cloud-config
-    hostname: "{{ ds.meta_data.instance_id }}.lab.internal"
-    package_upgrade: true
-    yum_repos:
-      epel-release:
-        name: Extra Packages for Enterprise Linux $releasever - $basearch
-        baseurl: https://dl.fedoraproject.org/pub/epel/$releasever/Everything/$basearch/
-        metalink: https://mirrors.fedoraproject.org/metalink?repo=epel-$releasever&arch=$basearch&infra=$infra&content=$contentdir
-        countme: 1
-        gpgcheck: true
-        gpgkey: https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
-    packages:
-      - bash-completion
-      - openssh
-      - curl
-      - wget
-      - htop
-      - vim
-      - tar
-      - man
-      - firewalld
-      - certbot
-    timezone: Asia/Ho_Chi_Minh
-    runcmd:
-      - systemctl enable --now firewalld.service
-      - firewall-cmd --remove-service=cockpit --permanent
-      - firewall-cmd --remove-service=dhcpv6-client --permanent
-      - firewall-cmd --add-service=http --permanent
-      - firewall-cmd --reload
-      - mandb
-  limits.cpu: "1"
-  limits.memory: 1GiB
-description: RHEL-based distro Incus profile
-devices:
-  eth0:
-    name: eth0
-    network: incusbr0
-    type: nic
-  root:
-    path: /
-    pool: default
-    type: disk
-name: rhel
-used_by: []
-project: default
-```
+{{< gist vancanhuit b6efa73893dcc6fb19798769c3e28920 >}}
 
-```yaml
-config:
-  limits.memory: 2GiB
-description: "Profile for VM"
-devices:
-  agent:
-    source: agent:config
-    type: disk
-name: vm-config
-used_by: []
-project: default
-```
-
-```sh 
-incus launch images:rockylinux/9/cloud test-01 --profile rhel
-incus launch images:rockylinux/9/cloud test-02 --vm --profile rhel --profile vm-config
-```
 
 Handling SELinux for `incus-agent` in virtual machine:
 
@@ -105,8 +39,5 @@ Handling SELinux for `incus-agent` in virtual machine:
 
 [https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/using_selinux/changing-selinux-states-and-modes_using-selinux#enabling-selinux-on-systems-that-previously-had-it-disabled_changing-selinux-states-and-modes](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/using_selinux/changing-selinux-states-and-modes_using-selinux#enabling-selinux-on-systems-that-previously-had-it-disabled_changing-selinux-states-and-modes).
 
-```sh
-semanage fcontext -a -t bin_t /var/run/incus_agent/incus-agent
-restorecon -R /run/incus-agent
-fixfiles -F onboot
-```
+{{< gist vancanhuit d51d2ec51ef07cdd4fc02512a078a4d6 >}}
+
