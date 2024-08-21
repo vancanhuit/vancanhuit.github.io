@@ -34,6 +34,13 @@ network:
 EOF
 
 incus start dns
+# wait for cloud-init to be done
+incus exec dns -- cloud-init status --wait
+# Check cloud-init logs in case any failure
+incus exec dns -- tail -f /var/log/cloud-init.log
+incus exec dns -- tail -f /var/log/cloud-init-output.log
+incus restart dns
+incus shell dns
 ```
 
 [https://technitium.com/dns/](https://technitium.com/dns/).
