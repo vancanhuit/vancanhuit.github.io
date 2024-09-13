@@ -45,15 +45,6 @@ incus shell idm
 DNS hostname: `idm.lab.internal`.
 
 ```sh
-# Change SELinux mode to permissive
-semanage fcontext -a -t bin_t /var/run/incus_agent/incus-agent
-restorecon -R /run/incus_agent
-fixfiles -F onboot
-# Restart VM
-# Change SELinux to enforcing mode
-```
-
-```sh
 firewall-cmd --permanent --add-service=https
 firewall-cmd --permanent --add-service=kerberos
 firewall-cmd --permanent --add-service=kpasswd
@@ -64,6 +55,15 @@ firewall-cmd --reload
 
 ```sh
 dnf install ipa-server
+```
+
+```sh
+# Change SELinux mode to permissive
+semanage fcontext -a -t bin_t /var/run/incus_agent/incus-agent
+restorecon -R /run/incus_agent
+fixfiles -F onboot
+# Restart VM
+# Change SELinux to enforcing mode
 ```
 
 [https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/installing_identity_management/assembly_installing-an-ipa-server-without-dns-with-external-ca_installing-identity-management#proc_installing-an-ipa-server-non-interactive-installation-without-dns-with-external-ca_assembly_installing-an-ipa-server-without-dns-with-external-ca](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/installing_identity_management/assembly_installing-an-ipa-server-without-dns-with-external-ca_installing-identity-management#proc_installing-an-ipa-server-non-interactive-installation-without-dns-with-external-ca_assembly_installing-an-ipa-server-without-dns-with-external-ca)
