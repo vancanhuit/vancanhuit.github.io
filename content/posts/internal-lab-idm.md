@@ -104,9 +104,10 @@ kinit admin
 ```
 
 ```sh
+# https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/accessing_identity_management_services/identity-management-security-settings_accessing-idm-services#proc_disabling-anonymous-binds_identity-management-security-settings
+dsconf slapd-LAB-INTERNAL config replace nsslapd-allow-anonymous-access=rootdse
 # To be compatible with dovecot
 dsconf slapd-LAB-INTERNAL pwpolicy set --pwdscheme SSHA512
 dsctl slapd-LAB-INTERNAL restart
 ```
 
-[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/#Identity%20Management](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/#Identity%20Management)
