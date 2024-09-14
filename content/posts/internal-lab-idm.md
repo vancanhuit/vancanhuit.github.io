@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2024-09-13T20:15:22+07:00
-title = "Internal lab setup notes - Self-hosting an identity management (IdM) system"
+title = "Internal lab setup notes - Self-hosting an Identity Management (IdM) system"
 +++
 
 Use [incus]({{< ref "incus-rhel-profile" >}}) to provision a virtual machine to host IdM service:

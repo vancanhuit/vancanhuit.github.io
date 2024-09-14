@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2024-08-21T20:06:38+07:00
-title = "Internal lab setup notes - Self-hosting a domain name system (DNS)"
+title = "Internal lab setup notes - Self-hosting a Domain Name System (DNS)"
 +++
 
 Use [incus]({{< ref "incus-rhel-profile" >}}) to provision a container to host DNS service:
