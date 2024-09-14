@@ -15,7 +15,7 @@ SUB_NET=$(echo ${IPV4_ADDR} | awk -F/ '{print $1}' | awk -F\. '{print $1"."$2"."
 incus create images:rockylinux/9/cloud db --profile rhel
 
 # set static IP for the host
-cat <<EOF | incus config set ca cloud-init.network-config -
+cat <<EOF | incus config set db cloud-init.network-config -
 network:
   version: 2
   renderer: NetworkManager
