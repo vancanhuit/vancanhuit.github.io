@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2024-09-14T11:25:49+07:00
-title = "Internal lab notes - Self-hosting a SQL database (DB)"
+title = "Internal lab setup notes - Self-hosting a SQL database (DB)"
 +++
 
 Use [incus]({{< ref "incus-rhel-profile" >}}) to provision a container to host DB service:
