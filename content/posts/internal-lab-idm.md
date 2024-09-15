@@ -57,6 +57,10 @@ firewall-cmd --reload
 dnf install ipa-server
 ```
 
+[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/using_selinux/changing-selinux-states-and-modes_using-selinux](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/using_selinux/changing-selinux-states-and-modes_using-selinux)
+
+[https://github.com/lxc/incus/commit/b2cd793ae4ce016ca7da128cc2d14544c041c801](https://github.com/lxc/incus/commit/b2cd793ae4ce016ca7da128cc2d14544c041c801)
+
 ```sh
 # Change SELinux mode to permissive
 semanage fcontext -a -t bin_t /var/run/incus_agent/incus-agent
