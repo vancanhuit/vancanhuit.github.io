@@ -78,3 +78,7 @@ certbot renew --force-renewal
 systemctl enable --now certbot-renew.timer
 ```
 
+```sh
+firewall-cmd --permanent --add-service=postgresql
+firewall-cmd --reload
+```

@@ -44,6 +44,11 @@ incus shell ca
 
 DNS hostname: `ca.lab.internal`.
 
+```sh
+firewall-cmd --permanent --add-service=https
+firewall-cmd --reload
+```
+
 [https://smallstep.com/docs/step-ca/installation/#redhat](https://smallstep.com/docs/step-ca/installation/#redhat)
 
 [https://smallstep.com/docs/step-ca/getting-started/](https://smallstep.com/docs/step-ca/getting-started/)

@@ -50,3 +50,10 @@ incus shell dns
 Zone: `lab.internal`.
 
 [Integrate with resolved](https://linuxcontainers.org/incus/docs/main/howto/network_bridge_resolved/).
+
+```sh
+firewall-cmd --permanent --add-service=dns
+firewall-cmd --permanent --add-port=5380/tcp
+firewall-cmd --permanent --add-port=53443/tcp
+firewall-cmd --reload
+```
