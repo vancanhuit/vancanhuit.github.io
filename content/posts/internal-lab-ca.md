@@ -62,3 +62,13 @@ firewall-cmd --reload
 [https://smallstep.com/docs/step-ca/certificate-authority-server-production/#create-a-service-user-to-run-step-ca](https://smallstep.com/docs/step-ca/certificate-authority-server-production/#create-a-service-user-to-run-step-ca)
 
 [https://eff-certbot.readthedocs.io/en/latest/](https://eff-certbot.readthedocs.io/en/latest/)
+
+```sh
+incus profile edit rhel
+```
+
+```yaml
+runcmd:
+  - curl -Lk https://ca.lab.internal/roots.pem -o /etc/pki/ca-trust/source/anchors/ca.crt
+  - update-ca-trust extract
+```
