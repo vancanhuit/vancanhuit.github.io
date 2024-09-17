@@ -174,9 +174,9 @@ $config['enigma_pgp_homedir'] = '/data/enigma';
 ```
 
 ```sh
-mkdir -pv /data/engima
-chown apache:apache /data/engima
-chmod 0700 /data/engima/
+mkdir -pv /data/enigma
+chown apache:apache /data/enigma
+chmod 0700 /data/enigma
 ```
 
 `/var/www/roundcubemail/plugins/managesieve/config.inc.php`:
