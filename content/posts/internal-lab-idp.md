@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2024-09-18T19:16:55+07:00
 title = "Internal lab setup notes - Self-hosting an Identity Provider (IdP)"
 +++
