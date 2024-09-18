@@ -118,7 +118,7 @@ chmod 0600 /etc/keycloak/keycloak.p12
 ```
 
 ```sh
-bin/kc.sh build --db=postgres
+/opt/keycloak/bin/kc.sh build --db=postgres
 ```
 
 ```sh
