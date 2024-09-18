@@ -44,7 +44,7 @@ incus shell webmail
 DNS hostname: `webmail.lab.internal`.
 
 ```sh
-dnf install httpd
+dnf install httpd python3-certbot-apache
 systemctl enable --now httpd
 ```
 
