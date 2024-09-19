@@ -74,11 +74,12 @@ MINIO_OPTS="--console-address :9001 --certs-dir /etc/minio/certs"
 
 ```sh
 mkdir -pv /mnt/data
-groupadd -r minio-user
 mkdir -pv /etc/minio/certs/CAs
 cp /etc/pki/ca-trust/source/anchors/ca.crt /etc/minio/certs/CAs/
 
+groupadd -r minio-user
 useradd -M -r -g minio-user minio-user
+
 chown minio-user:minio-user /mnt/data
 chmod 0700 /mnt/data
 chown minio-user:minio-user -R /etc/minio
