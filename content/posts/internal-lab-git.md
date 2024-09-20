@@ -163,4 +163,7 @@ ALLOWED_HOST_LIST = private
 
 [actions]
 ENABLED = false
+
+[ui]
+DEFAULT_SHOW_FULL_NAME = true
 ```
