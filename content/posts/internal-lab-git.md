@@ -4,7 +4,7 @@ date = 2024-09-20T18:55:53+07:00
 title = "Internal lab setup notes - Self-hosting a Git hosting service"
 +++
 
-Use [incus]({{< ref "incus-rhel-profile" >}}) to provision a container to host [gitea](https://about.gitea.com/) service:
+Use [incus]({{< ref "incus-rhel-profile" >}}) to provision a container to host [Gitea](https://about.gitea.com/) service:
 
 ```sh
 # Use managed bridge network for demo/prototype on a Linux workstation
