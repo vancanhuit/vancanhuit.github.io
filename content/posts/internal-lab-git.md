@@ -167,3 +167,7 @@ ENABLED = false
 [ui]
 DEFAULT_SHOW_FULL_NAME = true
 ```
+
+[https://docs.gitea.com/usage/authentication](https://docs.gitea.com/usage/authentication)
+
+[https://docs.gitea.com/administration/config-cheat-sheet](https://docs.gitea.com/administration/config-cheat-sheet)

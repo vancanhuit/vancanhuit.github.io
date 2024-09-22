@@ -109,3 +109,5 @@ firewall-cmd --permanent --add-port=9000/tcp
 firewall-cmd --permanent --add-port=9001/tcp
 firewall-cmd --reload
 ```
+
+[https://min.io/docs/minio/linux/administration/identity-access-management/ad-ldap-access-management.html](https://min.io/docs/minio/linux/administration/identity-access-management/ad-ldap-access-management.html)

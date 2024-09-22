@@ -149,3 +149,13 @@ WantedBy=multi-user.target
 systemctl daemon-reload
 systemctl enable --now keycloak
 ```
+
+[https://www.keycloak.org/docs/latest/server_admin/index.html#_ldap](https://www.keycloak.org/docs/latest/server_admin/index.html#_ldap)
+
+[https://www.keycloak.org/docs/latest/server_admin/index.html#configuring-realms](https://www.keycloak.org/docs/latest/server_admin/index.html#configuring-realms)
+
+[https://www.keycloak.org/docs/latest/server_admin/index.html#con-oidc_server_administration_guide](https://www.keycloak.org/docs/latest/server_admin/index.html#con-oidc_server_administration_guide)
+
+[https://www.keycloak.org/docs/latest/server_admin/index.html#configuring-authentication_server_administration_guide](https://www.keycloak.org/docs/latest/server_admin/index.html#configuring-authentication_server_administration_guide)
+
+
